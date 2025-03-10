@@ -1,30 +1,100 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    color: #333;
+    background-color: #f4f4f9;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+    background-color: #282c34;
+    color: #ffffff;
     text-align: center;
+    padding: 1rem 0;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+}
+
+#navToggle {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
+    margin: 0 1rem;
 }
 
 nav ul li a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:focus, nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    #navToggle {
+        display: block; /* Show toggle button on small screens */
+    }
+
+    nav {
+        display: none; /* Hide nav by default on small screens */
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    nav.active {
+        display: flex; /* Show nav when active */
+    }
+}
+
+/* Accessibility enhancements */
+a:focus {
+    outline: 3px solid #ffcc00;
+    outline-offset: 2px;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem 0;
+    background-color: #282c34;
+    color: #ffffff;
+    text-align: center;
 }
 
 main {
@@ -33,14 +103,4 @@ main {
 
 section {
     margin-bottom: 20px;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
 } 
