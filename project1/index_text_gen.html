@@ -15,7 +15,7 @@
       color: #fefefe;
       font-family: "News Gothic Bold", "News Gothic", sans-serif;
     }
-    /* Header styling */
+    /* Header styling with persistent nav bar */
     header {
       position: absolute;
       top: 0;
@@ -23,7 +23,10 @@
       background: rgba(0, 0, 0, 0.8);
       padding: 10px;
       text-align: center;
-      z-index: 10;
+      z-index: 20;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     header h1 {
       margin: 0;
@@ -40,6 +43,31 @@
     header a {
       color: #66ccff;
       text-decoration: none;
+    }
+    /* Navigation styling */
+    nav {
+      margin-top: 10px;
+      background: rgba(0, 0, 0, 0.9);
+      width: 100%;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+    nav ul li {
+      margin: 0 1rem;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav ul li a:hover,
+    nav ul li a:focus {
+      text-decoration: underline;
     }
     /* Starfield background */
     #starfield {
@@ -67,7 +95,7 @@
       bottom: 150px; /* Leave space for the word canvas */
       width: 100%;
       perspective: 400px;
-      z-index: 5;
+      z-index: 15;
     }
     /* Inner content that will scroll upward */
     #crawlContent {
@@ -89,7 +117,7 @@
       left: 0;
       width: 100%;
       height: 150px;
-      z-index: 8;
+      z-index: 10;
       background: transparent;
     }
     /* Star Wars–style crawl animation */
@@ -107,7 +135,7 @@
   <!-- Starfield Background -->
   <div id="starfield"></div>
   
-  <!-- Header Section -->
+  <!-- Header Section with Navigation -->
   <header>
     <h1>Sci‑Fy Text Generator</h1>
     <p>
@@ -116,6 +144,15 @@
     <p>
       Author: Jonathan Woodall | Chatgpt o3 mini-high
     </p>
+    <!-- Navigation Bar -->
+    <nav id="mainNav">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../project1/index_text_gen.html">Text Generator</a></li>
+        <li><a href="../project2/index_p5_game.html">Find The Ball</a></li>
+        <li><a href="../project3/index_CoinDrop.html">Coin Drop</a></li>
+      </ul>
+    </nav>
   </header>
 
   <!-- Crawl Section -->
@@ -334,4 +371,3 @@
   </script>
 </body>
 </html>
-

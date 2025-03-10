@@ -1,48 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header>
-        <h1>DGAH 220 Final Portfolio</h1>
-        <button id="navToggle" aria-label="Toggle navigation">☰</button>
-        <nav id="mainNav">
-            <ul>
-                <li><a href="project1/index_text_gen.html">Text Generator</a></li>
-                <li><a href="project2/index_p5_game.html">Find The Ball</a></li>
-                <li><a href="project3/index_CoinDrop.html">Coin Drop</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Starfield Background -->
+  <div id="starfield"></div>
 
-    <main>
-        <section id="project1">
-            <h2>Text Generator</h2>
-            <p>Description of Project 1.</p>
-            <a href="project1/index_text_gen.html">Documentation</a>
-        </section>
+  <!-- Fixed Header with Navigation -->
+  <header>
+    <h1>DGAH 220 Final Portfolio</h1>
+    <button id="navToggle" aria-label="Toggle navigation">☰</button>
+    <nav id="mainNav">
+      <ul>
+        <li><a href="project1/index_text_gen.html" class="trackable">Text Generator</a></li>
+        <li><a href="project2/index_p5_game.html" class="trackable">Find The Ball</a></li>
+        <li><a href="project3/index_CoinDrop.html" class="trackable">Coin Drop</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <section id="project2">
-            <h2>Find The Ball</h2>
-            <p>Description of Project 2.</p>
-            <a href="project2/index_p5_game.html">Documentation</a>
-        </section>
+  <!-- Main Content -->
+  <main>
+    <button id="toggleHoverClick" class="enabled">Disable Hover Click</button>
 
-        <section id="project3">
-            <h2>Coin Drop</h2>
-            <p>Description of Project 3.</p>
-            <a href="project3/index_CoinDrop.html">Documentation</a>
-        </section>
-    </main>
 
-    <footer>
-        <p>&copy; 2023 My Portfolio</p>
-    </footer>
 
-    <script src="scripts/script.js"></script>
+    <section id="project1">
+      <h2>Text Generator</h2>
+      <p>Description of Project 1.</p>
+      <a href="project1/index_text_gen.html" class="trackable">Documentation</a>
+    </section>
+
+    <section id="project2">
+      <h2>Find The Ball</h2>
+      <p>Description of Project 2.</p>
+      <a href="project2/index_p5_game.html" class="trackable">Documentation</a>
+    </section>
+
+    <section id="project3">
+      <h2>Coin Drop</h2>
+      <p>Description of Project 3.</p>
+      <a href="project3/index_CoinDrop.html" class="trackable">Documentation</a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 My Portfolio</p>
+  </footer>
+
+  <!-- Load ml5.js and custom JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ml5/0.6.0/ml5.min.js"></script>
+  <script src="scripts/script.js"></script>
 </body>
-</html> 
+</html>
