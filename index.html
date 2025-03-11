@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>My Portfolio</title>
   <link rel="stylesheet" href="styles/style.css">
+  <!-- Load p5.js if needed for other purposes -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
 </head>
 <body>
   <!-- Starfield Background -->
@@ -25,10 +27,6 @@
 
   <!-- Main Content -->
   <main>
-    <button id="toggleHoverClick" class="enabled">Disable Hover Click</button>
-
-
-
     <section id="project1">
       <h2>Text Generator</h2>
       <p>Description of Project 1.</p>
@@ -53,8 +51,7 @@
     <p>&copy; 2023 My Portfolio</p>
   </footer>
 
-  <!-- Load ml5.js and custom JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ml5/0.6.0/ml5.min.js"></script>
+  <!-- Load your custom JS AFTER the libraries -->
   <script src="scripts/script.js"></script>
 </body>
 </html>
